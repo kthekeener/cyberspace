@@ -1,0 +1,12 @@
+# Blender MTL File: 'treething.blend'
+# Material Count: 1
+
+newmtl Material
+Ns 160.137532
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.251542 0.511846
+Ks 0.500000 0.500000 0.500000
+Ke 0.009817 0.224998 0.548386
+Ni 1.450000
+d 1.000000
+illum 2

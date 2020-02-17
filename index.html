@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+ <head>
+ 	<meta charset="utf-8">
+ 	<title>cyberspace</title>
+ 	<script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+ 	<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+</head>
+ <body>
+ 	<a-scene fog="type: linear; color: #d19c00">
+ 		<a-assets>
+ 			<img id="groundtexture"src="images/checkerboard.jpg">
+ 			<img id="tubetex" src="images/tube.jpg">
+ 			<img id="walltex" src="images/wall.jpg">
+ 			<a-asset-item id="alien-obj" src="images/alien.obj"></a-asset-item>
+ 			<a-asset-item id="alien-mtl" src="images/alien.mtl"></a-asset-item>
+ 			<a-asset-item id="tree-obj" src="images/treething.obj"></a-asset-item>
+ 			<a-asset-item id="tree-mtl" src="images/treething.mtl"></a-asset-item>
+ 		</a-assets>
+ 		<a-sky src="images/spacepano.jpg" rotation="-80 25 25"></a-sky>
+ 		<a-plane src="#groundtexture" rotation="-90 0 0"
+ 		width="100" height="100"> </a-plane>
+ 		<a-cylinder id= "tube"
+ 			src="#tubetex"
+ 			height="100"
+ 			radius="1"
+ 			opacity="0.75"
+ 			material="side:double"
+ 			open-ended="true"
+ 			rotation="63 6.4 0"
+ 			position="16 13 -24">
+ 		</a-cylinder>
+ 		<a-entity id="ball"
+ 			geometry="primitive: sphere;"
+ 			material="color: white;metalness: 1"
+ 			position="-6 11 -19">
+ 		</a-entity>
+ 		<a-entity id="light1"
+ 			light="type: point; intensity: 1; distance: 50; decay: 2; color: #fbffa6"
+          	position=".235 6.647 4.263"></a-entity>
+        <a-entity id="light2"
+ 			light="type: point; intensity: 1; distance: 50; decay: 2; color: purple"
+          	position="-6 10 -19"></a-entity>
+        <a-entity id="light3"
+ 			light="type: point; intensity: 1; distance: 100; decay: 2"
+          	position="-.804 14 -27"></a-entity>
+        <a-entity id="light4"
+ 			light="type: point; intensity: 1; distance: 50; decay: 2; color: blue"
+          	position="19 13 -18"></a-entity>
+ 		<a-entity id="alien"
+ 			obj-model="obj: #alien-obj; mtl: #alien-mtl"
+ 			position="-.2 5 20"
+ 			roation="0 180 0"
+ 			scale="10 10 10">	
+ 		</a-entity>
+ 		<a-entity id="alien"
+ 			obj-model="obj: #tree-obj; mtl: #tree-mtl"
+ 			position="-23.6 .2 -39"
+ 			roation="0 0 0"
+ 			scale="1 1.3 1">	
+ 		</a-entity>
+ 		<a-ocean color="aqua" depth="100" width="100"></a-ocean>
+ 		<a-plane color="pink" rotation="-95 0 0" width="3" height="100"></a-plane>
+ 		<a-plane src="#walltex" width="120" height="60" rotation="20 -60 0" position="54 24 -16"></a-plane>
+ 		<a-entity line="start: 0, 1, 0; end: -6 11 -19; color: red"
+ 		line__2="start: 0, 1, .5; end: -6 11 -19; color: red"
+ 		line__3="start: 0, 1, 1; end: -6 11 -19; color: red"
+ 		line__4="start: 0, 1, 1.5; end: -6 11 -19; color: red"
+ 		line__5="start: 0, 1, 2; end: -6 11 -19; color: red"
+ 		line__6="start: 0, 1, 2.5; end: -6 11 -19; color: red"
+ 		line__7="start: 0, 1, 3; end: -6 11 -19; color: red"
+ 		line__8="start: 0, 1, 3.5; end: -6 11 -19; color: red"
+ 		line__9="start: 0, 1, 4; end: -6 11 -19; color: red"></a-entity>
+ 	</a-scene>
+ </body>
+ </html>
